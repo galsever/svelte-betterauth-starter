@@ -7,8 +7,6 @@ import {sveltekitCookies} from "better-auth/svelte-kit";
 import {getRequestEvent} from "$app/server";
 
 export const auth = betterAuth({
-    secret: BETTER_AUTH_SECRET,
-    baseURL: BETTER_AUTH_URL,
     database: drizzleAdapter(db, {
         provider: "pg"
     }),
